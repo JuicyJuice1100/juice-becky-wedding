@@ -1,12 +1,16 @@
 <app-header></app-header>
 
 <mat-sidenav-container>
-  <mat-sidenav #navBar>
+  <mat-sidenav #navBar [fixedInViewport]="true">
     <app-navigation></app-navigation>
   </mat-sidenav>
-  <mat-sidenav-content>
-    <app-about></app-about>
-  </mat-sidenav-content>
 </mat-sidenav-container>
+
+<app-about></app-about>
+<app-details></app-details>
+<app-photos></app-photos>
+<app-registry></app-registry>
+<app-venue></app-venue>
+<app-rsvp></app-rsvp>
 
 <app-footer></app-footer>

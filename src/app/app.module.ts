@@ -13,6 +13,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
+// Bootstrap
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+
 // Custom Components
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -24,6 +27,9 @@ import { RegistryComponent } from './components/registry/registry.component';
 import { RsvpComponent } from './components/rsvp/rsvp.component';
 import { GuestInfoComponent } from './components/guest-info/guest-info.component';
 import { HeaderComponent } from './components/header/header.component';
+import { PhotosComponent } from './components/photos/photos.component';
+import { VenueComponent } from './components/venue/venue.component';
+import { ClickOffDirective } from './directives/click-off.directive';
 
 @NgModule({
   declarations: [
@@ -37,7 +43,10 @@ import { HeaderComponent } from './components/header/header.component';
     RegistryComponent,
     RsvpComponent,
     GuestInfoComponent,
-    HeaderComponent
+    HeaderComponent,
+    PhotosComponent,
+    VenueComponent,
+    ClickOffDirective
   ],
   imports: [
     BrowserModule,
@@ -48,7 +57,8 @@ import { HeaderComponent } from './components/header/header.component';
     MatSidenavModule,
     MatMenuModule,
     MatListModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MDBBootstrapModule
   ],
   providers: [],
   bootstrap: [AppComponent]

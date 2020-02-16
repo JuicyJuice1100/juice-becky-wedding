@@ -1,5 +1,12 @@
-<mat-toolbar color="primary">
-  <button mat-button (click)="toggleNav()">
-    <mat-icon>menu</mat-icon>
+<mdb-navbar class="header" #header>
+  <button mat-icon-button (click)="toggleNav()">
+    <mat-icon [hidden]="hideHamburgerButton" class="hamburgerButton">menu</mat-icon>
   </button>
-</mat-toolbar>
+</mdb-navbar>
+<!-- TODO: Update to get images from firebase and get images dynamically -->
+<mdb-carousel>
+  <mdb-carousel-item>
+    <img class="d-block w-100" src="../../../assets/images/test/pexels-photo-1525041.jpeg"/>
+  </mdb-carousel-item>
+</mdb-carousel>
+
