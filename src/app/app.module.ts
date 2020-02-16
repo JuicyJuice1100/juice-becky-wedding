@@ -30,6 +30,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { PhotosComponent } from './components/photos/photos.component';
 import { VenueComponent } from './components/venue/venue.component';
 import { ClickOffDirective } from './directives/click-off.directive';
+import { HeaderPhotoComponent } from './components/header-photo/header-photo.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { ClickOffDirective } from './directives/click-off.directive';
     HeaderComponent,
     PhotosComponent,
     VenueComponent,
-    ClickOffDirective
+    ClickOffDirective,
+    HeaderPhotoComponent
   ],
   imports: [
     BrowserModule,
