@@ -15,6 +15,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 // Bootstrap
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 // Custom Components
 import { NavigationComponent } from './components/navigation/navigation.component';
@@ -60,7 +61,8 @@ import { HeaderPhotoComponent } from './components/header-photo/header-photo.com
     MatMenuModule,
     MatListModule,
     MatToolbarModule,
-    MDBBootstrapModule
+    MDBBootstrapModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
