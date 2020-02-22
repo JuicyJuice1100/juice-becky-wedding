@@ -1,58 +1,56 @@
 <!-- Material form login -->
-<mat-card>
+<div class="cardDisplay">
+  <mat-card>
 
-  <mat-card-title>
-    RSVP
-  </mat-card-title>
+    <mat-card-title>
+      RSVP
+    </mat-card-title>
+
+    <mat-card-content class="px-lg-5 pt-0">
+      <form (ngSubmit)="onSubmit()" #rsvpForm="ngForm">
+        <div class="form-row">
+          <mat-form-field class="form-group col-md-10">
+            <mat-label>Email</mat-label>
+            <input matInput>
+          </mat-form-field>
+
+          <mat-form-field class="form-group col-md-10">
+            <mat-label>Name</mat-label>
+            <input matInput required>
+          </mat-form-field>
+        </div>
+
+        <div class="form-row">
+          <mat-checkbox [(ngModel)]="hasPlusOne" name="hasPlusOne" class="form-group col-md-10">Bringing Plus One?</mat-checkbox>
+
+        </div>
+
+        <div class="form-row">
+          <mat-form-field *ngIf="hasPlusOne" class="form-group col-md-10">
+            <mat-label>Name of Plus One</mat-label>
+            <input matInput required>
+          </mat-form-field>
+        </div>
+
+        <div class="form-row">
+          <mat-form-field class="form-group col-md-10">
+            <mat-label>Invitation Code</mat-label>
+            <input matInput required>
+          </mat-form-field>
+        </div>
+
+        <div class="form-row">
+          <mat-form-field class="form-group col-md-10">
+            <mat-label>Message to Us</mat-label>
+            <textarea matInput maxlength="200"></textarea>
+          </mat-form-field>
+        </div>
 
 
-  <!--Card content-->
-  <mat-card-content class="px-lg-5 pt-0">
-
-    <!-- Form -->
-    <form (ngSubmit)="onSubmit()" #rsvpForm="ngForm">
-      <div class="form-row">
-        <mat-form-field class="form-group col-md-2">
-          <mat-label>Email</mat-label>
-          <input matInput>
-        </mat-form-field>
-
-        <mat-form-field class="form-group col-md-2">
-          <mat-label>Name</mat-label>
-          <input matInput required>
-        </mat-form-field>
-      </div>
-
-      <div class="form-row">
-        <mat-checkbox [(ngModel)]="hasPlusOne" name="hasPlusOne" class="form-group col-md-2">Bringing Plus One?</mat-checkbox>
-
-        <mat-form-field *ngIf="hasPlusOne" class="form-group col-md-2">
-          <mat-label>Name of Plus One</mat-label>
-          <input matInput required>
-        </mat-form-field>
-      </div>
-
-      <div class="form-row">
-        <mat-form-field class="form-group col-md-4">
-          <mat-label>Invitation Code</mat-label>
-          <input matInput required>
-        </mat-form-field>
-      </div>
-
-      <div class="form-row">
-        <mat-form-field class="form-group col-md-4">
-          <mat-label>Message to Us</mat-label>
-          <textarea matInput maxlength="200"></textarea>
-        </mat-form-field>
-      </div>
-
-
-      <button mat-raised-button type="submit">
-        Submit
-      </button>
-    </form>
-
-  </mat-card-content>
-
-</mat-card>
-<!-- Material form login -->
+        <button mat-raised-button class="submit" type="submit">
+          Submit
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
