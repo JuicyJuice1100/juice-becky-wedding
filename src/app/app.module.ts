@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,11 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 // Bootstrap
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
@@ -30,7 +36,6 @@ import { GuestInfoComponent } from './components/guest-info/guest-info.component
 import { HeaderComponent } from './components/header/header.component';
 import { PhotosComponent } from './components/photos/photos.component';
 import { VenueComponent } from './components/venue/venue.component';
-import { ClickOffDirective } from './directives/click-off.directive';
 import { HeaderPhotoComponent } from './components/header-photo/header-photo.component';
 
 @NgModule({
@@ -48,11 +53,11 @@ import { HeaderPhotoComponent } from './components/header-photo/header-photo.com
     HeaderComponent,
     PhotosComponent,
     VenueComponent,
-    ClickOffDirective,
     HeaderPhotoComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
@@ -62,7 +67,12 @@ import { HeaderPhotoComponent } from './components/header-photo/header-photo.com
     MatListModule,
     MatToolbarModule,
     MDBBootstrapModule,
-    NgbModule
+    NgbModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatCardModule,
+    MatInputModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

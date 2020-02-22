@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rsvp.component.scss']
 })
 export class RsvpComponent implements OnInit {
-
+  hasPlusOne = false;
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
+  onSubmit() {
+    console.log('submitted');
+  }
 }

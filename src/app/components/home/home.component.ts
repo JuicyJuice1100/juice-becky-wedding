@@ -1,17 +1,14 @@
 import { Component, OnInit, ViewChild, ViewChildren, AfterViewInit } from '@angular/core';
-import { SidenavService } from 'src/app/services/sidenav.service/sidenav.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements AfterViewInit {
-  @ViewChild('navBar') public navBar: any;
+export class HomeComponent implements OnInit {
+  constructor() {}
 
-  constructor(public sidenavService: SidenavService) {}
+  ngOnInit(): void {
 
-  ngAfterViewInit(): void {
-    this.sidenavService.navBar = this.navBar;
   }
 }
