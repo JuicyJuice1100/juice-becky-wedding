@@ -23,6 +23,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+// Ngu-carousel
+import { NguCarouselModule } from '@ngu/carousel';
+
 // Custom Components
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -72,7 +75,8 @@ import { HeaderPhotoComponent } from './components/header-photo/header-photo.com
     MatRadioModule,
     MatCardModule,
     MatInputModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    NguCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

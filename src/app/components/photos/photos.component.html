@@ -1,1 +1,27 @@
-<p>photos works!</p>
+<img *ngFor="let image of images" class="engagementPhoto" mat-card-sm-image src="{{image.src}}">
+
+<!-- <ngu-carousel #myCarousel [inputs]="carouselTile" [dataSource]="carouselLoad">
+  <ngu-tile *nguCarouselDef="let item; let i = index">
+
+    <ngu-carousel #myCarousel [inputs]="carouselTile" (carouselLoad)="carouselLoad(i)" [dataSource]="images[i]">
+      <ngu-tile *nguCarouselDef="let item; let j = index">
+        <div class="tile" [style.background]="'url(' + item + ')'" style="min-height: 200px">
+          <h1>{{j}}</h1>
+        </div>
+      </ngu-tile>
+      <button NguCarouselPrev class="leftRs" [style.opacity]="myCarousel.isFirst ? 0.5:1">&lt;</button>
+      <button NguCarouselNext class="rightRs" [style.opacity]="myCarousel.isLast ? 0.5:1">&gt;</button>
+      <ul class="myPoint" NguCarouselPoint>
+        <li *ngFor="let point of myCarousel.pointNumbers; let j = index" [class.active]="j==myCarousel.activePoint" (click)="myCarousel.moveTo(j)"
+          [style.background]="'url(' + images[j].src + ')'"></li>
+      </ul>
+    </ngu-carousel>
+
+  </ngu-tile>
+  <button NguCarouselPrev class="leftRs" [style.opacity]="myCarousel.isFirst ? 0.5:1">&lt;</button>
+  <button NguCarouselNext class="rightRs" [style.opacity]="myCarousel.isLast ? 0.5:1">&gt;</button>
+  <ul class="myPoint" NguCarouselPoint>
+    <li *ngFor="let point of myCarousel.pointNumbers; let i = index" [class.active]="i==myCarousel.activePoint" (click)="myCarousel.moveTo(i)"
+      [style.background]="'url(' + images[i].src + ')'"></li>
+  </ul>
+</ngu-carousel> -->
