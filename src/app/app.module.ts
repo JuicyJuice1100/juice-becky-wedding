@@ -18,6 +18,8 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+
 
 // Bootstrap
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
@@ -76,7 +78,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     MatCardModule,
     MatInputModule,
     MatCheckboxModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    ScrollingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

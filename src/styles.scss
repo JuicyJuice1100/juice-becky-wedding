@@ -26,16 +26,46 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   height: 100vh;
 }
 
-.navbar {
-  background-color: transparent;
-}
-
-.top-nav-collapse {
-  background-color: #4285F4;
+.navbar:hover {
+  background-color: rgba(0, 0, 0, .5);
 }
 
 @media only screen and (max-width: 768px) {
-  .navbar {
-      background-color: #4285F4;
+  .navbar:hover {
+    background-color: rgba(0, 0, 0, .7);
+  }
+  #navbarCollapse {
+    height: 100vh !important;
+  }
+
+  @media (orientation: portrait) {
+    #navbarLinks {
+      height: 90vh;
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .nav-item {
+      height: 100vmax;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 8vh;
+    }
+  }
+
+  @media (orientation: landscape) {
+    #navbarLinks {
+      height: 80vh;
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 8vh;
+    }
   }
 }
