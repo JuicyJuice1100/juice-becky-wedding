@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Injectable } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -23,9 +23,6 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-// Ngu-carousel
-import { NguCarouselModule } from '@ngu/carousel';
-
 // Custom Components
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -40,6 +37,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { PhotosComponent } from './components/photos/photos.component';
 import { VenueComponent } from './components/venue/venue.component';
 import { HeaderPhotoComponent } from './components/header-photo/header-photo.component';
+
+// Slick
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
@@ -76,7 +76,7 @@ import { HeaderPhotoComponent } from './components/header-photo/header-photo.com
     MatCardModule,
     MatInputModule,
     MatCheckboxModule,
-    NguCarouselModule
+    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

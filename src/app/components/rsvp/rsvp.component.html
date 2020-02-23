@@ -9,12 +9,12 @@
     <mat-card-content class="px-lg-5 pt-0">
       <form (ngSubmit)="onSubmit()" #rsvpForm="ngForm">
         <div class="form-row">
-          <mat-form-field class="form-group col-md-10">
+          <mat-form-field class="form-group col-md-12">
             <mat-label>Email</mat-label>
             <input matInput>
           </mat-form-field>
 
-          <mat-form-field class="form-group col-md-10">
+          <mat-form-field class="form-group col-md-12">
             <mat-label>Name</mat-label>
             <input matInput required>
           </mat-form-field>
@@ -26,28 +26,28 @@
         </div>
 
         <div class="form-row">
-          <mat-form-field *ngIf="hasPlusOne" class="form-group col-md-10">
+          <mat-form-field *ngIf="hasPlusOne" class="form-group col-md-12">
             <mat-label>Name of Plus One</mat-label>
             <input matInput required>
           </mat-form-field>
         </div>
 
         <div class="form-row">
-          <mat-form-field class="form-group col-md-10">
+          <mat-form-field class="form-group col-md-12">
             <mat-label>Invitation Code</mat-label>
             <input matInput required>
           </mat-form-field>
         </div>
 
         <div class="form-row">
-          <mat-form-field class="form-group col-md-10">
+          <mat-form-field class="form-group col-md-12">
             <mat-label>Message to Us</mat-label>
             <textarea matInput maxlength="200"></textarea>
           </mat-form-field>
         </div>
 
 
-        <button mat-raised-button class="submit" type="submit">
+        <button mat-raised-button class="submit form-group col-md-12" type="submit">
           Submit
         </button>
       </form>
