@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-navigation',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class NavigationComponent implements OnInit {
-  constructor() { }
+  constructor(@Inject(DOCUMENT) private document: Document) { }
 
   ngOnInit(): void {
   }
