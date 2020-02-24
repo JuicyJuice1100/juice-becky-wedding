@@ -42,6 +42,7 @@ import { HeaderPhotoComponent } from './components/header-photo/header-photo.com
 
 // Slick
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { InstagramComponent } from './components/instagram/instagram.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     HeaderComponent,
     PhotosComponent,
     VenueComponent,
-    HeaderPhotoComponent
+    HeaderPhotoComponent,
+    InstagramComponent
   ],
   imports: [
     BrowserModule,
