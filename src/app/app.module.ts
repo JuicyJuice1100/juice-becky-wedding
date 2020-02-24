@@ -18,7 +18,6 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { ScrollingModule } from '@angular/cdk/scrolling';
 
 
 // Bootstrap
@@ -43,6 +42,10 @@ import { HeaderPhotoComponent } from './components/header-photo/header-photo.com
 // Slick
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { InstagramComponent } from './components/instagram/instagram.component';
+
+// ngx-scroll
+import { NgxPageScrollModule  } from 'ngx-page-scroll';
+import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 
 @NgModule({
   declarations: [
@@ -81,7 +84,8 @@ import { InstagramComponent } from './components/instagram/instagram.component';
     MatInputModule,
     MatCheckboxModule,
     SlickCarouselModule,
-    ScrollingModule
+    NgxPageScrollCoreModule,
+    NgxPageScrollModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
