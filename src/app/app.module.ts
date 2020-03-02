@@ -84,7 +84,7 @@ import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
     MatInputModule,
     MatCheckboxModule,
     SlickCarouselModule,
-    NgxPageScrollCoreModule,
+    NgxPageScrollCoreModule.forRoot({duration: 1000}),
     NgxPageScrollModule,
   ],
   providers: [],

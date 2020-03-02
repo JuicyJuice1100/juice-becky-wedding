@@ -14,7 +14,7 @@ export class PhotosComponent implements OnInit {
   }));
 
   slideConfig = {
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
     swipeToSlide: true,
     centerMode: true,
@@ -24,21 +24,18 @@ export class PhotosComponent implements OnInit {
     focusOnSelect: true,
     useTransform: true,
     adaptiveHeight: true,
-    mobileFirst: true
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 3
+        }
+      }
+    ]
   };
 
-  constructor(breakpointObserver: BreakpointObserver) {
-    breakpointObserver.observe([
-      Breakpoints.HandsetLandscape,
-      Breakpoints.HandsetPortrait
-    ]).subscribe(result => {
-      if (result.matches) {
-        this.slideConfig.slidesToShow = 1;
-      }
-    });
-  }
+  constructor() {}
 
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 }

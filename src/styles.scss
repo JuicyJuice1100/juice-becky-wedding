@@ -1,13 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
-html,
-body {
-  height: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
+// html,
+// body {
+//   height: 100%;
+//   max-width: 100%;
+//   overflow-x: hidden;
+// }
 
 body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   -ms-overflow-style: none;
@@ -17,18 +20,19 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+.top-nav-collapse {
+  background-color: rgba(0, 0, 0, .7);
+}
+
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-.navbar:hover {
-  background-color: rgba(0, 0, 0, .5);
-}
+// .navbar:hover {
+//   background-color: rgba(0, 0, 0, .5);
+// }
 
 @media only screen and (max-width: 1000px) {
   .navbar:hover {
     background-color: rgba(0, 0, 0, .7);
-  }
-  #navbarCollapse {
-    height: 100vh !important;
   }
 
   @media (orientation: portrait) {
