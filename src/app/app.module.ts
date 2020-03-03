@@ -30,10 +30,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { DetailsComponent } from './components/details/details.component';
-import { GuestBookComponent } from './components/guest-book/guest-book.component';
 import { RegistryComponent } from './components/registry/registry.component';
 import { RsvpComponent } from './components/rsvp/rsvp.component';
-import { GuestInfoComponent } from './components/guest-info/guest-info.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PhotosComponent } from './components/photos/photos.component';
 import { VenueComponent } from './components/venue/venue.component';
@@ -55,10 +53,8 @@ import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
     HomeComponent,
     AboutComponent,
     DetailsComponent,
-    GuestBookComponent,
     RegistryComponent,
     RsvpComponent,
-    GuestInfoComponent,
     HeaderComponent,
     PhotosComponent,
     VenueComponent,
