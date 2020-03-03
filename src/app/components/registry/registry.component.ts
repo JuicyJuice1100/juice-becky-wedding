@@ -1,9 +1,9 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: "app-registry",
-  templateUrl: "./registry.component.html",
-  styleUrls: ["./registry.component.scss"]
+  selector: 'app-registry',
+  templateUrl: './registry.component.html',
+  styleUrls: ['./registry.component.scss']
 })
 export class RegistryComponent implements OnInit {
   cards = [
@@ -17,7 +17,7 @@ export class RegistryComponent implements OnInit {
       url: 'https://www.target.com/',
       image: 'https://picsum.photos/300/500'
     }
-  ]
+  ];
 
   constructor() {}
 

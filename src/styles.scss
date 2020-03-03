@@ -8,31 +8,42 @@
 // }
 
 body {
-  height: 100%;
-  width: 100%;
-  overflow-x: hidden;
-  margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  -ms-overflow-style: none;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
   display: none;
 }
 
-.top-nav-collapse {
-  background-color: rgba(0, 0, 0, .7);
+.navbar {
+  background-color: transparent;
 }
 
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.top-nav-collapse {
+  background-color: rgba(0, 0, 0, 0.7);
+}
 
-// .navbar:hover {
-//   background-color: rgba(0, 0, 0, .5);
-// }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1023px) {
+  // html,
+  // body {
+  //   height: 100%;
+  //   max-width: 100%;
+  //   overflow-x: hidden;
+  // }
+
   .navbar:hover {
-    background-color: rgba(0, 0, 0, .7);
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .navbar {
+    overflow: hidden;
+  }
+
+  #navbarCollapse {
+    height: 100vmax !important;
   }
 
   @media (orientation: portrait) {

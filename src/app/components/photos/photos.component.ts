@@ -27,7 +27,7 @@ export class PhotosComponent implements OnInit {
     mobileFirst: true,
     responsive: [
       {
-        breakpoint: 1000,
+        breakpoint: 1439,
         settings: {
           slidesToShow: 3
         }

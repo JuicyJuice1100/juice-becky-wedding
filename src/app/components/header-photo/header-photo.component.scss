@@ -4,6 +4,7 @@
     no-repeat center center;
   background-size: cover;
   height: 100vh;
+  width: 100vw;
   position: relative;
 }
 
@@ -18,10 +19,10 @@
   animation-iteration-count: infinite;
 }
 
-// .icon-display {
-//   animation: bounce 2s;
-//   animation-iteration-count: infinite;
-// }
+.icon-display {
+  animation: bounce 2s;
+  animation-iteration-count: infinite;
+}
 
 // @keyframes bounce {
 //   0%,

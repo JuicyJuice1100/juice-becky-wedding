@@ -8,7 +8,7 @@ import { DOCUMENT } from '@angular/common';
 })
 
 export class NavigationComponent implements OnInit {
-  constructor(@Inject(DOCUMENT) private document: Document) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
