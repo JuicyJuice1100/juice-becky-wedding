@@ -1,12 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 
-// html,
-// body {
-//   height: 100%;
-//   max-width: 100%;
-//   overflow-x: hidden;
-// }
-
 body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   overflow-x: hidden;
@@ -16,30 +9,13 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-.navbar {
-  background-color: transparent;
-}
-
 .top-nav-collapse {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
 @media only screen and (max-width: 1023px) {
-  // html,
-  // body {
-  //   height: 100%;
-  //   max-width: 100%;
-  //   overflow-x: hidden;
-  // }
-
   .navbar:hover {
     background-color: rgba(0, 0, 0, 0.7);
-  }
-
-  .navbar {
-    overflow: hidden;
   }
 
   #navbarCollapse {

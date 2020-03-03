@@ -6,7 +6,6 @@ import { Component, OnInit, Output, AfterViewInit, ViewChild } from '@angular/co
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  hideHamburgerButton = false;
   constructor() { }
 
   ngOnInit(): void {
