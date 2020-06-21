@@ -21,17 +21,30 @@
           </mat-form-field>
         </div>
 
-        <div class="form-row">
-          <mat-checkbox [(ngModel)]="hasPlusOne" name="hasPlusOne" class="form-group col-md-10">Bringing Plus One?</mat-checkbox>
-
+        <div class="form-row personAdd">
+          <!-- <mat-checkbox [(ngModel)]="hasPlusOne" name="hasPlusOne" class="form-group col-md-10">Bringing Plus One?</mat-checkbox> -->
+          <button mat-raised-button class="form-group" color="primary" (click)="addPerson()">
+            <mat-icon inline="true">person_add</mat-icon>
+            Add Guest
+          </button>
         </div>
 
-        <div class="form-row">
+        <div class="form-row" *ngFor="let person of people; let i = index;">
+          <mat-form-field class="form-group col-md-12 inputPerson">
+            <mat-label>Name</mat-label>
+            <input matInput required [(ngModel)]="person.fullName" name="person_{{i}}"/>
+            <button mat-mini-fab matSuffix color="primary" (click)="removePerson()">
+              <mat-icon>person_remove</mat-icon>
+            </button>
+          </mat-form-field>
+        </div>
+
+        <!-- <div class="form-row">
           <mat-form-field *ngIf="hasPlusOne" class="form-group col-md-12">
             <mat-label>Name of Plus One</mat-label>
             <input matInput required>
           </mat-form-field>
-        </div>
+        </div> -->
 
         <div class="form-row">
           <mat-form-field class="form-group col-md-12">

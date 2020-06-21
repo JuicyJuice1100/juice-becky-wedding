@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rsvp.component.scss']
 })
 export class RsvpComponent implements OnInit {
-  hasPlusOne = false;
+  // hasPlusOne = false;
+  people = [
+
+  ];
+
   constructor() { }
 
   ngOnInit(): void {
@@ -15,5 +19,15 @@ export class RsvpComponent implements OnInit {
 
   onSubmit() {
     console.log('submitted');
+  }
+
+  addPerson(){
+    this.people.push({
+      fullName: ''
+    });
+  }
+
+  removePerson(i: number) {
+    this.people.splice(i, 1);
   }
 }
