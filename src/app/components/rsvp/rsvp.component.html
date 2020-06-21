@@ -33,7 +33,7 @@
           <mat-form-field class="form-group col-md-12 inputPerson">
             <mat-label>Name</mat-label>
             <input matInput required [(ngModel)]="person.fullName" name="person_{{i}}"/>
-            <button mat-mini-fab matSuffix color="primary" (click)="removePerson()">
+            <button mat-mini-fab matSuffix color="primary" (click)="removePerson(i)">
               <mat-icon>person_remove</mat-icon>
             </button>
           </mat-form-field>
