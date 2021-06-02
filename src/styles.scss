@@ -13,7 +13,7 @@ body::-webkit-scrollbar {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1000px) {
   .navbar:hover {
     background-color: rgba(0, 0, 0, 0.7);
   }
@@ -34,7 +34,7 @@ body::-webkit-scrollbar {
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 8vh;
+      font-size: 15vw;
     }
   }
 
