@@ -44,6 +44,7 @@ import { InstagramComponent } from './components/instagram/instagram.component';
 // ngx-scroll
 import { NgxPageScrollModule  } from 'ngx-page-scroll';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
+import { HotelsComponent } from './components/hotels/hotels.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
     PhotosComponent,
     VenueComponent,
     HeaderPhotoComponent,
-    InstagramComponent
+    InstagramComponent,
+    HotelsComponent
   ],
   imports: [
     BrowserModule,

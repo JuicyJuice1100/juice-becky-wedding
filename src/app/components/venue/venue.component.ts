@@ -7,6 +7,7 @@ import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/n
   styleUrls: ['./venue.component.scss']
 })
 export class VenueComponent implements OnInit {
+  //images will be of the public museum venue
   images = [62, 83, 466, 965, 982, 1043, 738].map((n) => `https://picsum.photos/id/${n}/2000/500`);
 
   paused = false;
