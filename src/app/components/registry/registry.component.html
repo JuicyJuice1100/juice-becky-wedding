@@ -1,10 +1,17 @@
+<div class="registryHeader">
+  <h1>Registry</h1>
+  <h2>Shut Up & Give Us Your Money!!</h2>
+</div>
 <div class="cardContainer">
-  <mat-card *ngFor="let card of cards" class="cardDisplay z-depth-5">
+  <mat-card *ngFor="let card of cards" class="cardDisplay z-depth-3">
     <mat-card-header>
       <mat-card-title>{{card.title}}</mat-card-title>
     </mat-card-header>
     <img mat-card-image src="{{card.image}}" alt="{{card.title}}">
     <a mat-raised-button target="_blank" href="{{card.url}}" class="submit form-group col-md-12" color="primary">Go to Registry</a>
   </mat-card>
+</div>
+<div class="seperator">
+  
 </div>
 

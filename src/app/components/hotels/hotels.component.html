@@ -1,11 +1,9 @@
-<div>
-  <h1 class="cardHeader">Lodging</h1>
-  <h2 class="cardHeader">
-    <p>*Reserve Sooner than later to guarantee a room*</p>
-  </h2>
+<div class="cardHeader">
+  <h1>Lodging</h1>
+  <h2>*Reserve Sooner than later to guarantee a room*</h2>
 </div>
 <div class="cardContainer">
-  <mat-card *ngFor="let card of cards" class="cardDisplay z-depth-5">
+  <mat-card *ngFor="let card of cards" class="cardDisplay z-depth-3">
     <mat-card-header>
       <mat-card-title>{{card.title}}</mat-card-title>
     </mat-card-header>
@@ -15,4 +13,7 @@
     <!-- <img mat-card-image src="{{card.image}}" alt="{{card.title}}"> -->
     <a mat-raised-button target="_blank" href="{{card.url}}" class="submit form-group col-md-12" color="primary">Reserve a Room</a>
   </mat-card>
+</div>
+<div class="seperator">
+  
 </div>
