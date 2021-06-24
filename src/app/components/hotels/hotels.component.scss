@@ -18,6 +18,13 @@
     text-align: center;
 }
 
-
+@media only screen and (max-width: 1000px) {
+    .cardContainer {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-direction: column;
+    }
+}
 
   
