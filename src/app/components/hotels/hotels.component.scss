@@ -27,4 +27,24 @@
     }
 }
 
+.cardHeader h1 {
+    font-size: xx-large;
+}
+
+.seperator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.seperator:after {
+    border-bottom: 2px solid #E6E9EA;
+    content: '';
+    display: block;
+    padding: 5px;
+    margin: 5px;
+    width: 80vw;
+}
+
   
