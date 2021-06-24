@@ -3,14 +3,11 @@
     margin: 5px;
     justify-content: center;
     align-items: stretch;
+    text-align: center;
 }
 
 .cardDisplay {
     margin: 5px;
-}
-
-.mat-card-header {
-    text-align: center;
 }
 
 .cardHeader {
@@ -24,6 +21,7 @@
         justify-content: center;
         align-items: stretch;
         flex-direction: column;
+        text-align: center;
     }
 }
 

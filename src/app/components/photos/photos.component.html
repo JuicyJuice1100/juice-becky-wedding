@@ -1,5 +1,5 @@
 <div class="carouselContainer">
-  <h1 class="text-center">Sexy people doing cool shit</h1>
+  <h1 class="text-center my-5">Sexy people doing cool shit</h1>
   <ngx-slick-carousel class="carousel z-depth-2" #slickModal="slick-carousel" [config]="slideConfig" responsive="breakpoints">
     <a class="engagementSlide" ngxSlickItem *ngFor="let image of images" href="{{image.src}}" target="_blank">
       <img class="engagementSlide rounded img-fluid" src="{{image.src}}" alt="{{image.description}}">

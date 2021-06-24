@@ -9,13 +9,15 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 export class PhotosComponent implements OnInit {
 
-  //images should be our engagement photos
+  //TODO: images should be our engagement photos
+  //TODO: Create service for getting photos
   images = [62, 83, 466, 965, 982, 1043, 738].map(n => ({
     src: `https://picsum.photos/id/${n}/500/300`,
     description: `description`
   }));
 
   slideConfig = {
+    autoplay: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     swipeToSlide: true,

@@ -1,5 +1,24 @@
-<div class="detailContainer">
-    <p>details works!</p>
+<div class="detailContainer pt-5">
+    <div>
+        <h2>Come Join Us For Our Wedding Celebration</h2>
+        <h1>May 14, 2022</h1>
+    </div>
+</div>
+<div class="eventsContainer mt-3">
+    <h1>Events</h1>
+    <div class="cardContainer">
+        <mat-card *ngFor="let card of cards" class="cardDisplay z-depth-3">
+          <mat-card-content>
+            <mat-card-title>{{card.title}}</mat-card-title>
+            <mat-card-subtitle>{{card.day}}</mat-card-subtitle>
+            <mat-card-title>{{card.time}}</mat-card-title>
+          </mat-card-content>
+          <mat-card-footer class='mb-2'>
+            <div>{{card.location}}</div>
+            <div>{{card.address}}</div>
+          </mat-card-footer>
+        </mat-card>
+      </div>
 </div>
 
 
