@@ -1,0 +1,24 @@
+.detailContainer  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .detailContainer:after {
+    border-bottom: 2px solid #E6E9EA;
+    content: '';
+    display: block;
+    padding: 5px;
+    margin: 5px;
+    width: 80vw;
+  }
+  
+  .detailContainer:before {
+    border-bottom: 2px solid #E6E9EA;
+    content: '';
+    display: block;
+    padding: 5px;
+    margin: 5px;
+    width: 80vw;
+  }
