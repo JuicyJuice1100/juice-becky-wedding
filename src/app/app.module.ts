@@ -45,6 +45,14 @@ import { InstagramComponent } from './components/instagram/instagram.component';
 import { NgxPageScrollModule  } from 'ngx-page-scroll';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { HotelsComponent } from './components/hotels/hotels.component';
+
+//Fire
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from 'src/environments/environment';
+
+//Services
+import { RsvpService } from './services/rsvp/rsvp.service';
 import { ImageService } from './services/image/image.service';
 
 @NgModule({
@@ -85,8 +93,13 @@ import { ImageService } from './services/image/image.service';
     SlickCarouselModule,
     NgxPageScrollCoreModule.forRoot({duration: 1000}),
     NgxPageScrollModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
   ],
-  providers: [ImageService],
+  providers: [
+    ImageService,
+    RsvpService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
