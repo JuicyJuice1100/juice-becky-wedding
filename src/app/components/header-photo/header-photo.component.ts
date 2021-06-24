@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header-photo.component.scss']
 })
 export class HeaderPhotoComponent implements OnInit {
-  headerPhoto = '../../../assets/images/header/header.JPEG';
+  headerPhoto = '../assets/images/header/header.JPEG';
   constructor() { }
 
   ngOnInit(): void {

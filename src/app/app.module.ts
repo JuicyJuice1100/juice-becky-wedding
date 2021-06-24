@@ -45,6 +45,7 @@ import { InstagramComponent } from './components/instagram/instagram.component';
 import { NgxPageScrollModule  } from 'ngx-page-scroll';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { HotelsComponent } from './components/hotels/hotels.component';
+import { ImageService } from './services/image/image.service';
 
 @NgModule({
   declarations: [
@@ -85,7 +86,7 @@ import { HotelsComponent } from './components/hotels/hotels.component';
     NgxPageScrollCoreModule.forRoot({duration: 1000}),
     NgxPageScrollModule,
   ],
-  providers: [],
+  providers: [ImageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,5 @@
 <div class="carouselContainer">
-  <ngb-carousel class="z-depth-3" #carousel interval="1000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
+  <ngb-carousel class="z-depth-3 imageCarousel" #carousel interval="5000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
     <ng-template ngbSlide *ngFor="let img of images; index as i">
       <div class="carousel-caption">
         <div>
@@ -8,9 +8,9 @@
           <h1>Starts @ 18:00</h1>
         </div>
       </div>
-      <a href="https://picsum.photos/id/{{i}}/2000/500" target="_blank" rel="nofollow noopener noreferrer">
+      <a href="{{img.url}}" target="_blank" rel="nofollow noopener noreferrer">
         <div>
-          <img class="venuePhoto" [src]="img" alt="My image {{i}} description">
+          <img class="venuePhoto" src="{{img.url}}" alt="{{img.description}}">
         </div>
       </a>
     </ng-template>
