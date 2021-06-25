@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RsvpService } from 'src/app/services/rsvp/rsvp.service';
 
 @Component({
   selector: 'app-rsvp',
