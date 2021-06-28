@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { RsvpService } from 'src/app/services/rsvp/rsvp.service';
-import { Rsvp } from 'src/app/models/models';
+import { Rsvp, Guest } from 'src/app/models/models';
 import { FormArray, FormBuilder, FormControl } from '@angular/forms';
+import { ChangeDetectorRef } from '@angular/core';
+
+const resolvedPromise = Promise.resolve(null);
 
 @Component({
   selector: 'app-rsvp',
@@ -9,10 +12,7 @@ import { FormArray, FormBuilder, FormControl } from '@angular/forms';
   styleUrls: ['./rsvp.component.scss']
 })
 export class RsvpComponent implements OnInit {
-  // hasPlusOne = false;
-  guests: FormArray;
-
-  rsvpForm = this.formBuilder.group({
+  @Input() rsvpForm = this.formBuilder.group({
     email: '',
     name: '',
     foodRestrictions: '',
@@ -20,26 +20,45 @@ export class RsvpComponent implements OnInit {
     guests: this.formBuilder.array([])
   });
 
+  showRsvpError = false;
+
 
   constructor(private rsvpService: RsvpService,
-    private formBuilder: FormBuilder) { }
+    private formBuilder: FormBuilder,
+    private ref: ChangeDetectorRef) { }
 
   ngOnInit(): void {
 
   }
 
   onSubmit() {
-    
+    const rsvp: Rsvp = {
+      email: this.rsvpForm.controls['email'].value,
+      name: this.rsvpForm.controls['name'].value,
+      foodRestrictions: this.rsvpForm.controls['foodRestrictions'].value,
+      invitationId: this.rsvpForm.controls['inviteCode'].value,
+      guests: (this.rsvpForm.get('guests') as FormArray).getRawValue().map(q => {
+        const guest: Guest = {
+          name: q.guestName,
+          foodRestrictions: q.guestFoodRestrictions
+        }
+        return guest;
+      })
+    };
+
+    this.showRsvpError = this.rsvpService.createdRsvp(rsvp)
   }
 
   addGuest(){
-    this.guests = this.rsvpForm.get('guests') as FormArray;
-    this.guests.push(this.createGuest());
+    const guests = this.rsvpForm.get('guests') as FormArray;
+    guests.push(this.createGuest());
+
+    this.ref.detectChanges();
   }
 
   removeGuest(i: number) {
-    this.guests = this.rsvpForm.get('guests') as FormArray;
-    this.guests.removeAt(i);
+    const guests = this.rsvpForm.get('guests') as FormArray;
+    guests.removeAt(i);
   }
 
   createGuest() {

@@ -28,19 +28,23 @@
         </div>
 
         <div formArrayName="guests" class="form-row" *ngFor="let guest of rsvpForm.get('guests')['controls']; let i = index;">
+          <mat-divider></mat-divider>
           <div [formGroupName]="i">
             <mat-form-field class="form-group col-md-12 inputPerson">
               <mat-label>Name</mat-label>
               <input formControlName="guestName" matInput required name="guest{{i}}"/>
-              <button mat-mini-fab matSuffix color="primary" (click)="removeGuest(i)">
-                <mat-icon>person_remove</mat-icon>
-              </button>
             </mat-form-field>
   
             <mat-form-field class="form-group col-md-12">
               <mat-label>Dietary Restrictions</mat-label>
               <textarea formControlName="guestFoodRestrictions" matInput maxlength="200" placeholder="Tree nuts, Vegatarian, etc..."></textarea>
             </mat-form-field>
+          </div>
+
+          <div>
+            <button mat-fab matSuffix color="primary" class="mt-3" (click)="removeGuest(i)">
+              <mat-icon>person_remove</mat-icon>
+            </button>
           </div>
         </div>
 
@@ -77,8 +81,6 @@
         <button [disabled]="!rsvpForm.valid" mat-raised-button class="submit form-group col-md-12" type="submit" color="primary">
           Submit
         </button>
-
-        <div>{{rsvpForm.value}}</div>
       </form>
     </mat-card-content>
   </mat-card>
