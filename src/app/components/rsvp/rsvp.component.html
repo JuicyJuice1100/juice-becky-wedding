@@ -9,32 +9,44 @@
     </mat-card-title>
 
     <mat-card-content class="px-lg-5 pt-0">
-      <form (ngSubmit)="onSubmit()" #rsvpForm="ngForm">
+      <form [formGroup]="rsvpForm" (ngSubmit)="onSubmit()">
         <div class="form-row">
           <mat-form-field class="form-group col-md-12">
             <mat-label>Email</mat-label>
-            <input matInput>
+            <input formControlName="email" matInput>
           </mat-form-field>
 
           <mat-form-field class="form-group col-md-12">
             <mat-label>Name</mat-label>
-            <input matInput required>
+            <input formControlName="name" matInput required>
+          </mat-form-field>
+
+          <mat-form-field class="form-group col-md-12">
+            <mat-label>Dietary Restrictions</mat-label>
+            <textarea formControlName="foodRestrictions" matInput maxlength="200" placeholder="Tree nuts, Vegatarian, etc..."></textarea>
           </mat-form-field>
         </div>
 
-        <div class="form-row" *ngFor="let person of people; let i = index;">
-          <mat-form-field class="form-group col-md-12 inputPerson">
-            <mat-label>Name</mat-label>
-            <input matInput required [(ngModel)]="person.fullName" name="person_{{i}}"/>
-            <button mat-mini-fab matSuffix color="primary" (click)="removePerson(i)">
-              <mat-icon>person_remove</mat-icon>
-            </button>
-          </mat-form-field>
+        <div formArrayName="guests" class="form-row" *ngFor="let guest of rsvpForm.get('guests')['controls']; let i = index;">
+          <div [formGroupName]="i">
+            <mat-form-field class="form-group col-md-12 inputPerson">
+              <mat-label>Name</mat-label>
+              <input formControlName="guestName" matInput required name="guest{{i}}"/>
+              <button mat-mini-fab matSuffix color="primary" (click)="removeGuest(i)">
+                <mat-icon>person_remove</mat-icon>
+              </button>
+            </mat-form-field>
+  
+            <mat-form-field class="form-group col-md-12">
+              <mat-label>Dietary Restrictions</mat-label>
+              <textarea formControlName="guestFoodRestrictions" matInput maxlength="200" placeholder="Tree nuts, Vegatarian, etc..."></textarea>
+            </mat-form-field>
+          </div>
         </div>
 
         <div class="form-row personAdd">
           <!-- <mat-checkbox [(ngModel)]="hasPlusOne" name="hasPlusOne" class="form-group col-md-10">Bringing Plus One?</mat-checkbox> -->
-          <button mat-raised-button class="form-group" color="primary" (click)="addPerson()">
+          <button mat-raised-button class="form-group" color="primary" (click)="addGuest()">
             <mat-icon inline="true">person_add</mat-icon>
             Add Guest
           </button>
@@ -50,21 +62,23 @@
         <div class="form-row">
           <mat-form-field class="form-group col-md-12">
             <mat-label>Invitation Code</mat-label>
-            <input matInput required>
+            <input formControlName="inviteCode" matInput required>
           </mat-form-field>
         </div>
 
-        <div class="form-row">
+        <!-- <div class="form-row">
           <mat-form-field class="form-group col-md-12">
             <mat-label>Message to Us</mat-label>
             <textarea matInput maxlength="200"></textarea>
           </mat-form-field>
-        </div>
+        </div> -->
 
 
-        <button mat-raised-button class="submit form-group col-md-12" type="submit" color="primary">
+        <button [disabled]="!rsvpForm.valid" mat-raised-button class="submit form-group col-md-12" type="submit" color="primary">
           Submit
         </button>
+
+        <div>{{rsvpForm.value}}</div>
       </form>
     </mat-card-content>
   </mat-card>

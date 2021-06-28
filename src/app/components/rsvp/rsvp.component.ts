@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RsvpService } from 'src/app/services/rsvp/rsvp.service';
+import { Rsvp } from 'src/app/models/models';
+import { FormArray, FormBuilder, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-rsvp',
@@ -8,27 +10,42 @@ import { RsvpService } from 'src/app/services/rsvp/rsvp.service';
 })
 export class RsvpComponent implements OnInit {
   // hasPlusOne = false;
-  people = [
+  guests: FormArray;
 
-  ];
+  rsvpForm = this.formBuilder.group({
+    email: '',
+    name: '',
+    foodRestrictions: '',
+    inviteCode: '',
+    guests: this.formBuilder.array([])
+  });
 
-  constructor() { }
+
+  constructor(private rsvpService: RsvpService,
+    private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
 
   }
 
   onSubmit() {
-    console.log('submitted');
+    
   }
 
-  addPerson(){
-    this.people.push({
-      fullName: ''
+  addGuest(){
+    this.guests = this.rsvpForm.get('guests') as FormArray;
+    this.guests.push(this.createGuest());
+  }
+
+  removeGuest(i: number) {
+    this.guests = this.rsvpForm.get('guests') as FormArray;
+    this.guests.removeAt(i);
+  }
+
+  createGuest() {
+    return this.formBuilder.group({
+      guestName: new FormControl(null),
+      guestFoodRestrictions: new FormControl(null)
     });
-  }
-
-  removePerson(i: number) {
-    this.people.splice(i, 1);
   }
 }
