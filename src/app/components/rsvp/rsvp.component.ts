@@ -49,6 +49,7 @@ export class RsvpComponent implements OnInit {
 
     const invitation = this.rsvpService.getInvitation(rsvp);
 
+    //TODO: show errors and loading using something like finally
     invitation.subscribe(data => {
       this.isLoading = true;
       if(data != null && data.id === rsvp.invitationId && data.name.toLowerCase() === rsvp.name.toLowerCase()){
