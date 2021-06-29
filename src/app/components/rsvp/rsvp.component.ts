@@ -3,6 +3,7 @@ import { RsvpService } from 'src/app/services/rsvp/rsvp.service';
 import { Rsvp, Guest } from 'src/app/models/models';
 import { FormArray, FormBuilder, FormControl } from '@angular/forms';
 import { ChangeDetectorRef } from '@angular/core';
+import { finalize } from 'rxjs/operators';
 
 const resolvedPromise = Promise.resolve(null);
 
@@ -21,7 +22,7 @@ export class RsvpComponent implements OnInit {
   });
 
   showRsvpError = false;
-
+  isLoading = false;
 
   constructor(private rsvpService: RsvpService,
     private formBuilder: FormBuilder,
@@ -46,13 +47,29 @@ export class RsvpComponent implements OnInit {
       })
     };
 
-    this.showRsvpError = this.rsvpService.createdRsvp(rsvp)
+    const invitation = this.rsvpService.getInvitation(rsvp);
+
+    invitation.subscribe(data => {
+      this.isLoading = true;
+      if(data != null && data.id === rsvp.invitationId && data.name.toLowerCase() === rsvp.name.toLowerCase()){
+        this.rsvpService.createRsvp(rsvp);
+        this.showRsvpError = false;
+      } else {
+        this.showRsvpError = true;
+      }
+
+      this.isLoading = false;
+    }, error => {
+      this.showRsvpError = true;
+      this.isLoading = false;
+    })
   }
 
   addGuest(){
     const guests = this.rsvpForm.get('guests') as FormArray;
     guests.push(this.createGuest());
 
+    //needed for validation
     this.ref.detectChanges();
   }
 

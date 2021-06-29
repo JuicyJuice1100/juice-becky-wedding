@@ -18,6 +18,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 
 
 // Bootstrap
@@ -48,7 +49,6 @@ import { HotelsComponent } from './components/hotels/hotels.component';
 
 //Fire
 import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
 
 //Services
@@ -91,11 +91,11 @@ import { ImageService } from './services/image/image.service';
     MatCardModule,
     MatInputModule,
     MatCheckboxModule,
+    MatProgressSpinnerModule,
     SlickCarouselModule,
     NgxPageScrollCoreModule.forRoot({duration: 1000}),
     NgxPageScrollModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule.enablePersistence(),
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [
     ImageService,

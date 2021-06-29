@@ -1,69 +1,70 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument  } from '@angular/fire/firestore';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { Invitation, Rsvp } from '../../models/models';
-import { map, switchMap, combineAll, filter } from 'rxjs/operators';
+import { filter } from 'rxjs/operators'
+import { of } from 'rxjs'
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class RsvpService {
-  rsvpsCollection: AngularFirestoreCollection<Rsvp>;
-  rsvps: Observable<Rsvp[]>;
-  rsvpDoc: AngularFirestoreDocument<Rsvp>;
+  // invitationsRef: AngularFireList<Invitation>
+  // invitations: Observable<Invitation[]>
+  // subject = new Subject<Invitation>();
 
-  invitationsCollection: AngularFirestoreCollection<Invitation>;
-  invitations: Observable<Invitation[]>;
-  invitationDoc: AngularFirestoreDocument<Invitation>;
+  createRsvp(rsvp: Rsvp)
+  {
+    const ref = this.db.object(`rsvps/${rsvp.name}${rsvp.invitationId}`);
 
-  getRsvpByInvitationId(invitationId: String){
-    return this.rsvps.pipe(
-      map(actions => actions.find(rsvp => rsvp.invitationId == invitationId))
-    );
-  }
-
-  getInvitationByIdandName(id: String, name: String){
-    return this.invitations.pipe(
-      map(actions => actions.find(invitation => invitation.id == id && invitation.name == name))
-    );
+    ref.set(rsvp);
   }
 
   updateRsvp(rsvp: Rsvp){
-    this.rsvpDoc.update(rsvp);
+    const ref = this.db.object(`rsvps/${rsvp.name}${rsvp.invitationId}`);
+
+    ref.update(rsvp);
+
+    return true;
   }
 
-  addRsvp(rsvp: Rsvp){
-    const id = this.firestore.createId();
-    this.rsvpsCollection.doc(id).set(rsvp);
+  getInvitation(rsvp: Rsvp){
+    return this.db.object<Invitation>(`invitations/${rsvp.invitationId}`).valueChanges();
   }
 
-  createdRsvp(rsvp: Rsvp)
-  {
-    let invitation = this.getInvitationByIdandName(rsvp.invitationId, rsvp.name);
-    if(invitation){
-      let rsvpItem = this.getRsvpByInvitationId(rsvp.invitationId);
-      if(rsvpItem){
-        this.updateRsvp(rsvp);
-      } else {
-        this.addRsvp(rsvp);
-      }
-      return true;
-    }
-    return false;
-  }
+  // getInvitation(rsvp: Rsvp){
+  //   return this.subject.pipe(filter(
+  //     ((invite: Invitation) => invite.id === rsvp.invitationId && invite.name.toLowerCase() === rsvp.name.toLowerCase())
+  //   ))
+  // }
 
-  constructor(private firestore: AngularFirestore) {
-    this.rsvpsCollection = firestore.collection<Rsvp>('rsvps');
-    this.rsvps = this.rsvpsCollection.valueChanges();
+  // validateRsvp(rsvp: Rsvp){
+  //   // const invitationRef = this.db.object<Invitation>(`invitations`).valueChanges();
+  //   let isValidRsvp = false;
 
-    this.invitationsCollection = firestore.collection<Invitation>('invitations');
-    this.invitations = this.invitationsCollection.snapshotChanges().pipe(
-      map(actions => actions.map(a => {
-        const data = a.payload.doc.data() as Invitation;
-        const id = a.payload.doc.id;
-        return {id, ...data};
-      }))
-    );
+  //   // this.invitationsRef.forEach((invite: Invitation) => {
+  //   //   this.subject.next(invite)
+  //   // });
+    
+  //   // const invitation = this.getInvitation(rsvp).subscribe(
+  //   //   q => { 
+  //   //     isValidRsvp = q.name.toLowerCase() === rsvp.name.toLowerCase()
+  //   //   }
+  //   // );    
+
+  //   this.getInvitation(rsvp)
+  //   return isValidRsvp;
+  // }
+
+
+
+  constructor(private db: AngularFireDatabase) {
+    // this.invitationsRef = db.list('invitations');
+    // this.invitations = this.invitationsRef.valueChanges()
+
+    // this.invitations.subscribe(action => action.forEach((invite: Invitation) => {
+    //   this.subject.next(invite);
+    // }))
   }
 }

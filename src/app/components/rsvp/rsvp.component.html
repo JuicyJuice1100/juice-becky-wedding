@@ -42,7 +42,7 @@
           </div>
 
           <div>
-            <button mat-fab matSuffix color="primary" class="mt-3" (click)="removeGuest(i)">
+            <button mat-fab matSuffix color="primary" class="mt-3" (click)="removeGuest(i)" type="button">
               <mat-icon>person_remove</mat-icon>
             </button>
           </div>
@@ -50,7 +50,7 @@
 
         <div class="form-row personAdd">
           <!-- <mat-checkbox [(ngModel)]="hasPlusOne" name="hasPlusOne" class="form-group col-md-10">Bringing Plus One?</mat-checkbox> -->
-          <button mat-raised-button class="form-group" color="primary" (click)="addGuest()">
+          <button mat-raised-button class="form-group" color="primary" (click)="addGuest()" type="button">
             <mat-icon inline="true">person_add</mat-icon>
             Add Guest
           </button>
@@ -77,10 +77,15 @@
           </mat-form-field>
         </div> -->
 
-
-        <button [disabled]="!rsvpForm.valid" mat-raised-button class="submit form-group col-md-12" type="submit" color="primary">
+        <button [disabled]="!rsvpForm.valid || isLoading" mat-raised-button class="submit form-group col-md-12" type="submit" color="primary">
           Submit
         </button>
+
+        <div class='spinnerWrapper'>
+          <mat-spinner *ngIf='isLoading' class='m-5' ></mat-spinner>
+        </div>
+       
+        <mat-error class='m-5' *ngIf='showRsvpError'>Unable to send RSVP.  Please try again.</mat-error>
       </form>
     </mat-card-content>
   </mat-card>
