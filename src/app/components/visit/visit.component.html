@@ -1,0 +1,19 @@
+<!-- TODO: get some of our favorite spots -->
+<div class="header">
+    <h1>Things to do in Milwaukee</h1>
+    <h2><a href="https://www.visitmilwaukee.org/" target="_blank">Official Milwaukee Guide</a></h2>
+</div>
+<div class="header">
+    <h1>Our Favorite Spots</h1>
+</div>
+<div class="cardContainer">
+    <mat-card *ngFor="let card of cards" class="cardDisplay z-depth-3">
+      <mat-card-content class="cardContent">
+        <mat-card-title>{{card.title}}</mat-card-title>
+        <div>{{card.address}}</div>
+      </mat-card-content>
+      <mat-card-actions>
+        <a mat-raised-button target="_blank" href="{{card.url}}" class="submit form-group col-md-12" color="primary">Go to Website</a>
+      </mat-card-actions>
+    </mat-card>
+  </div>

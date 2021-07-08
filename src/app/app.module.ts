@@ -54,6 +54,7 @@ import { environment } from 'src/environments/environment';
 //Services
 import { RsvpService } from './services/rsvp/rsvp.service';
 import { ImageService } from './services/image/image.service';
+import { VisitComponent } from './components/visit/visit.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { ImageService } from './services/image/image.service';
     VenueComponent,
     HeaderPhotoComponent,
     InstagramComponent,
-    HotelsComponent
+    HotelsComponent,
+    VisitComponent
   ],
   imports: [
     BrowserModule,
