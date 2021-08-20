@@ -1,10 +1,10 @@
 <div class="instagramContainer">
   <div class="hashMessage text-center">
     <h1>All your photos are belong to us!</h1>
-    <p>Hi!  I'm Mr. Meeseeks, look at me! Share your photos<a href="https://www.theknot.com/photo-sharing-app/" target="_blank"> The Guest </a>app</p>
-    <p>Event Code <a href="http:///in.veri.com/to/bjwedding2022" target="_blank">BJWEDDING2022</a></p>
+    <p>Hi!  I'm Mr. Meeseeks, look at me! Share your photos<a href="{{theGuestData.appLink}}" target="_blank"> The Guest </a>app</p>
+    <p>Event Code <a href="{{theGuestData.eventLink}}" target="_blank">BJWEDDING2022</a></p>
   </div>
   <div>
-    <img src="{{instagramPhoto.img}}" alt='{{instagramPhoto.alt}}' class="z-depth-3 rounded">
+    <img src="{{theGuestData.img}}" alt='{{theGuestData.alt}}' class="z-depth-3 rounded">
   </div>
 </div>

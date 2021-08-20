@@ -14,15 +14,9 @@ export class HotelsComponent implements OnInit {
       address: "139 E Kilbourn Ave, Milwaukee, WI 53202"
     },
     {
-      title: 'Brewhouse Inn & Suites',
-      //TODO: Get brewhouse link
-      url: 'https://www.brewhousesuites.com/',
-      address: "1215 N 10th St, Milwaukee, WI 53205"
-    },
-    {
       title: 'Homewood Suites',
       //TODO: Get homewood link
-      url: 'https://www.hilton.com/en/homewood/',
+      url: '<INSERT LINK HERE>',
       address: "500 N. Water Street, Milwaukee, WI 53202"
     }
   ];
