@@ -9,14 +9,6 @@ import { ImageService } from 'src/app/services/image/image.service';
 })
 
 export class PhotosComponent implements OnInit {
-
-  //TODO: images should be our engagement photos
-  //TODO: Create service for getting photos
-  // images = [62, 83, 466, 965, 982, 1043, 738].map(n => ({
-  //   src: `https://picsum.photos/id/${n}/500/300`,
-  //   description: `description`
-  // }));
-
   images = []
 
   slideConfig = {
