@@ -1,5 +1,7 @@
 
 
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
+
 @media (orientation: portrait) {
   .view {
     //Insert image here
@@ -50,4 +52,9 @@
   60% {
     transform: translateY(-15px);
   }
+}
+
+h1 {
+  font-family: 'Tangerine', cursive;
+  font-size: 125px;
 }
