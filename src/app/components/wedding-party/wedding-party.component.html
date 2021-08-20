@@ -1,0 +1,60 @@
+<div class="container">
+    <div>
+        <h1 class="text-center my-5">Wedding Party</h1>
+    </div>
+</div>
+<div class="container">
+    <div>
+        <h2>Groomsmen</h2>
+    </div>
+    <div class="cardContainer">
+        <mat-card *ngFor="let card of groomsmen" class="cardDisplay z-depth-3 container">
+            <mat-card-header>
+                <mat-card-title>{{card.name}}</mat-card-title>
+                <mat-card-subtitle>{{card.role}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content class="container">
+                <img mat-card-md-image src="{{card.image}}" alt="{{card.title}}">
+                <p>
+                    Insert About Here
+                </p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="seperator"></div>
+    <div>
+        <h2>Bridesmaids</h2>
+    </div>
+    <div class="cardContainer">
+        <mat-card *ngFor="let card of bridesmaids" class="cardDisplay z-depth-3 container">
+            <mat-card-header>
+                <mat-card-title>{{card.name}}</mat-card-title>
+                <mat-card-subtitle>{{card.role}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content class="container">
+                <img mat-card-md-image src="{{card.image}}" alt="{{card.title}}">
+                <p>
+                    Insert About Here
+                </p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="seperator"></div>
+    <div>
+        <h2>Other Wedding Roles</h2>
+    </div>
+    <div class="cardContainer">
+        <mat-card *ngFor="let card of other" class="cardDisplay z-depth-3 container">
+            <mat-card-header>
+                <mat-card-title>{{card.name}}</mat-card-title>
+                <mat-card-subtitle>{{card.role}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content class="container">
+                <img mat-card-md-image src="{{card.image}}" alt="{{card.title}}">
+                <p>
+                    Insert About Here
+                </p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

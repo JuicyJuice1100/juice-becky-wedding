@@ -19,6 +19,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
+import { MatExpansionModule } from '@angular/material/expansion'
 
 
 // Bootstrap
@@ -29,13 +30,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
-import { AboutComponent } from './components/about/about.component';
 import { DetailsComponent } from './components/details/details.component';
 import { RegistryComponent } from './components/registry/registry.component';
 import { RsvpComponent } from './components/rsvp/rsvp.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PhotosComponent } from './components/photos/photos.component';
-import { VenueComponent } from './components/venue/venue.component';
 import { HeaderPhotoComponent } from './components/header-photo/header-photo.component';
 
 // Slick
@@ -55,6 +54,7 @@ import { environment } from 'src/environments/environment';
 import { RsvpService } from './services/rsvp/rsvp.service';
 import { ImageService } from './services/image/image.service';
 import { VisitComponent } from './components/visit/visit.component';
+import { WeddingPartyComponent } from './components/wedding-party/wedding-party.component';
 
 @NgModule({
   declarations: [
@@ -62,17 +62,16 @@ import { VisitComponent } from './components/visit/visit.component';
     NavigationComponent,
     FooterComponent,
     HomeComponent,
-    AboutComponent,
     DetailsComponent,
     RegistryComponent,
     RsvpComponent,
     HeaderComponent,
     PhotosComponent,
-    VenueComponent,
     HeaderPhotoComponent,
     InstagramComponent,
     HotelsComponent,
-    VisitComponent
+    VisitComponent,
+    WeddingPartyComponent
   ],
   imports: [
     BrowserModule,
@@ -97,7 +96,8 @@ import { VisitComponent } from './components/visit/visit.component';
     SlickCarouselModule,
     NgxPageScrollCoreModule.forRoot({duration: 1000}),
     NgxPageScrollModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    MatExpansionModule
   ],
   providers: [
     ImageService,

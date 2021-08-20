@@ -7,8 +7,10 @@
     <mat-card-header>
       <mat-card-title>{{card.title}}</mat-card-title>
     </mat-card-header>
-    <img mat-card-image src="{{card.image}}" alt="{{card.title}}">
-    <a mat-raised-button target="_blank" href="{{card.url}}" class="submit form-group col-md-12" color="primary">Go to Registry</a>
+    <img mat-card-image src="{{card.image}}">
+    <mat-card-content>
+      <a mat-raised-button target="_blank" href="{{card.url}}" class="submit form-group col-md-12" color="primary">Go to Registry</a>
+    </mat-card-content>
   </mat-card>
 </div>
 
