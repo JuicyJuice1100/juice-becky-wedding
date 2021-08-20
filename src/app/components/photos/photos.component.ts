@@ -28,10 +28,12 @@ export class PhotosComponent implements OnInit {
       {
         breakpoint: 1439,
         settings: {
-          slidesToShow: 3
+          slidesToShow: 3,
+          autoplay: true,
+          slidesToScroll: 3
         }
       }
-    ]
+    ],
   };
 
   getEngagementPhotos(): void {
