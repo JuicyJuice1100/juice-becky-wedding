@@ -51,7 +51,7 @@ export class WeddingPartyComponent implements OnInit {
       image: 'https://picsum.photos/200/200'
     },
     {
-      name: 'Emily Pertersen',
+      name: 'Emily Petersen',
       role: 'Bridesmaid',
       image: 'https://picsum.photos/200/200'
     },

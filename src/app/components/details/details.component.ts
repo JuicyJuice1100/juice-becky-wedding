@@ -9,7 +9,7 @@ export class DetailsComponent implements OnInit {
 
   cards = [
     {
-      title: 'Rehersal Dinner',
+      title: 'Rehearsal Dinner',
       day: 'Friday, May 13',
       time: 'TBA',
       location: '',
