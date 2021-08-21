@@ -1,0 +1,71 @@
+<div class="container">
+    <div>
+        <h1 class="text-center my-5">Bridal Party</h1>
+    </div>
+</div>
+<mat-accordion>
+    <mat-expansion-panel class="mx-3">
+        <mat-expansion-panel-header class="text-center my-3 container">
+            <h1>Groomsmen</h1>
+        </mat-expansion-panel-header>
+        <div class="carouselContainer">
+            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" responsive="breakpoints" [config]="slideConfig">
+                <mat-card class="cardDisplay z-depth-3 container engagementSlide rounded img-fluid m-4" *ngFor="let card of groomsmen" ngxSlickItem [style.backgroundColor]="'#7b1fa2'">
+                    <mat-card-header>
+                        <mat-card-title>{{card.name}}</mat-card-title>
+                        <mat-card-subtitle>{{card.role}}</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content class="containerContent">
+                        <img mat-card-lg-image src="{{card.image}}" alt="{{card.title}}">
+                        <p class="about">
+                            Insert About Here
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </ngx-slick-carousel>
+          </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel class="mx-3">
+        <mat-expansion-panel-header class="text-center my-3 container">
+            <h1>Bridesmaids</h1>
+        </mat-expansion-panel-header>
+        <div class="carouselContainer">
+            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" responsive="breakpoints" [config]="slideConfig">
+                <mat-card class="cardDisplay z-depth-3 container engagementSlide rounded img-fluid m-4" *ngFor="let card of bridesmaids" ngxSlickItem [style.backgroundColor]="'#7b1fa2'">
+                    <mat-card-header>
+                        <mat-card-title>{{card.name}}</mat-card-title>
+                        <mat-card-subtitle>{{card.role}}</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content class="containerContent">
+                        <img mat-card-lg-image src="{{card.image}}" alt="{{card.title}}">
+                        <p class="about">
+                            Insert About Here
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </ngx-slick-carousel>
+          </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel class="mx-3">
+        <mat-expansion-panel-header class="text-center my-3 container">
+            <h1>Other</h1>
+        </mat-expansion-panel-header>
+        <div class="carouselContainer">
+            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" responsive="breakpoints" [config]="slideConfig">
+                <mat-card class="cardDisplay z-depth-3 container engagementSlide rounded img-fluid m-4" *ngFor="let card of other" ngxSlickItem [style.backgroundColor]="'#7b1fa2'">
+                    <mat-card-header>
+                        <mat-card-title>{{card.name}}</mat-card-title>
+                        <mat-card-subtitle>{{card.role}}</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content class="containerContent">
+                        <img mat-card-lg-image src="{{card.image}}" alt="{{card.title}}">
+                        <p class="about">
+                            Insert About Here
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </ngx-slick-carousel>
+          </div>
+    </mat-expansion-panel>
+</mat-accordion>
+

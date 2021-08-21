@@ -55,6 +55,7 @@ import { RsvpService } from './services/rsvp/rsvp.service';
 import { ImageService } from './services/image/image.service';
 import { VisitComponent } from './components/visit/visit.component';
 import { WeddingPartyComponent } from './components/wedding-party/wedding-party.component';
+import { WeddingPartyCarouselComponent } from './components/wedding-party-carousel/wedding-party-carousel.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,8 @@ import { WeddingPartyComponent } from './components/wedding-party/wedding-party.
     InstagramComponent,
     HotelsComponent,
     VisitComponent,
-    WeddingPartyComponent
+    WeddingPartyComponent,
+    WeddingPartyCarouselComponent
   ],
   imports: [
     BrowserModule,
