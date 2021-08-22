@@ -10,10 +10,10 @@
         </mat-expansion-panel-header>
         <div class="carouselContainer">
             <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" responsive="breakpoints" [config]="slideConfig">
-                <mat-card class="cardDisplay z-depth-3 container engagementSlide rounded img-fluid m-4" *ngFor="let card of groomsmen" ngxSlickItem [style.backgroundColor]="'#7b1fa2'">
+                <mat-card class="cardDisplay z-depth-3 container engagementSlide rounded img-fluid m-4 textAltColor" *ngFor="let card of groomsmen" ngxSlickItem [style.backgroundColor]="'#69f0ae'">
                     <mat-card-header>
                         <mat-card-title>{{card.name}}</mat-card-title>
-                        <mat-card-subtitle>{{card.role}}</mat-card-subtitle>
+                        <mat-card-subtitle class="textSubtitleColor">{{card.role}}</mat-card-subtitle>
                     </mat-card-header>
                     <mat-card-content class="containerContent">
                         <img mat-card-lg-image src="{{card.image}}" alt="{{card.title}}">
@@ -52,10 +52,10 @@
         </mat-expansion-panel-header>
         <div class="carouselContainer">
             <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" responsive="breakpoints" [config]="slideConfig">
-                <mat-card class="cardDisplay z-depth-3 container engagementSlide rounded img-fluid m-4" *ngFor="let card of other" ngxSlickItem [style.backgroundColor]="'#7b1fa2'">
+                <mat-card class="cardDisplay z-depth-3 container engagementSlide rounded img-fluid m-4 textAltColor" *ngFor="let card of other" ngxSlickItem [style.backgroundColor]="'#69f0ae'">
                     <mat-card-header>
                         <mat-card-title>{{card.name}}</mat-card-title>
-                        <mat-card-subtitle>{{card.role}}</mat-card-subtitle>
+                        <mat-card-subtitle class="textSubtitleColor">{{card.role}}</mat-card-subtitle>
                     </mat-card-header>
                     <mat-card-content class="containerContent">
                         <img mat-card-lg-image src="{{card.image}}" alt="{{card.title}}">
