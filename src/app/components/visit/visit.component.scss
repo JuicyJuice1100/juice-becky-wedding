@@ -11,8 +11,8 @@
     display: flex;
     margin: 5px;
     justify-content: center;
-    align-items: stretch;
     text-align: center;
+    flex-wrap: wrap;
 }
 
 .cardDisplay {
@@ -24,12 +24,9 @@
     text-align: center;
 }
 
-@media only screen and (max-width: 1000px) {
-    .cardContainer {
-        display: flex;
-        justify-content: center;
-        align-items: stretch;
-        flex-direction: column;
-        text-align: center;
-    }
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }

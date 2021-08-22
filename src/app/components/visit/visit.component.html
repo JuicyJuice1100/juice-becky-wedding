@@ -4,16 +4,41 @@
     <h2><a href="https://www.visitmilwaukee.org/" target="_blank">Official Milwaukee Guide</a></h2>
 </div>
 <div class="header">
-    <h1>Our Favorite Spots</h1>
+    <h1>Our Recomendations</h1>
 </div>
-<div class="cardContainer">
-    <mat-card *ngFor="let card of cards" class="cardDisplay z-depth-3">
-      <mat-card-content class="cardContent">
-        <mat-card-title>{{card.title}}</mat-card-title>
-        <div>{{card.address}}</div>
-      </mat-card-content>
-      <mat-card-actions>
-        <a mat-raised-button target="_blank" href="{{card.url}}" class="submit form-group col-md-12" color="primary">Go to Website</a>
-      </mat-card-actions>
-    </mat-card>
-  </div>
+<div *ngIf="deviceInfo.deviceType == 'desktop'; then thenBlock else elseBlock"></div>
+  <ng-template #thenBlock>
+    <div class="cardContainer">
+      <mat-card *ngFor="let card of cards" class="cardDisplay z-depth-3">
+        <mat-card-content>
+          <mat-card-title>{{card.title}}</mat-card-title>
+          <mat-list>
+            <mat-list-item *ngFor="let place of card.places">
+              <a mat-raised-button target="_blank" href="{{place.url}}" class="form-group col-md-12" color="{{card.color}}">{{place.name}}</a>
+            </mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </ng-template>
+  <ng-template #elseBlock>
+    <mat-accordion class="mx-3">
+      <mat-expansion-panel *ngFor="let card of cards" class="m-2 z-depth-3">
+        <mat-expansion-panel-header  class="container my-3">
+          <mat-panel-title>
+            <h1>{{card.title}}</h1>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-panel-description>
+          <mat-list class="container">
+            <mat-list-item *ngFor="let place of card.places">
+              <a mat-raised-button target="_blank" href="{{place.url}}" class="form-group col-md-12" color="{{card.color}}">{{place.name}}</a>
+            </mat-list-item>
+          </mat-list>
+        </mat-panel-description>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </ng-template>
+
+
+   
