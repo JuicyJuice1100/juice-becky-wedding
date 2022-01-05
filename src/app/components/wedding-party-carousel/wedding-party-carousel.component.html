@@ -17,9 +17,11 @@
                     </mat-card-header>
                     <mat-card-content class="containerContent">
                         <img mat-card-lg-image src="{{card.image}}" alt="{{card.title}}">
-                        <p class="about">
-                            Insert About Here
-                        </p>
+                        <div class="about">
+                            <p *ngFor="let p of card.about">
+                                {{p}}
+                            </p>
+                        </div>
                     </mat-card-content>
                 </mat-card>
             </ngx-slick-carousel>
@@ -38,9 +40,11 @@
                     </mat-card-header>
                     <mat-card-content class="containerContent">
                         <img mat-card-lg-image src="{{card.image}}" alt="{{card.title}}">
-                        <p class="about">
-                            Insert About Here
-                        </p>
+                        <div class="about">
+                            <p *ngFor="let p of card.about">
+                                {{p}}
+                            </p>
+                        </div>
                     </mat-card-content>
                 </mat-card>
             </ngx-slick-carousel>
@@ -59,9 +63,11 @@
                     </mat-card-header>
                     <mat-card-content class="containerContent">
                         <img mat-card-lg-image src="{{card.image}}" alt="{{card.title}}">
-                        <p class="about">
-                            Insert About Here
-                        </p>
+                        <div class="about">
+                            <p *ngFor="let p of card.about">
+                                {{p}}
+                            </p>
+                        </div>
                     </mat-card-content>
                 </mat-card>
             </ngx-slick-carousel>
