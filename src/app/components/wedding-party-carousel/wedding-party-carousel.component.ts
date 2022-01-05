@@ -81,8 +81,7 @@ export class WeddingPartyCarouselComponent implements OnInit {
     {
       name: 'Grace Broadnax',
       role: 'Bridesmaid',
-      image: '../assets/images/bridalParty/bridesmaids/',
-      about: ["insert about"]
+      image: '../assets/images/bridalParty/bridesmaids/'
     },
     {
       name: 'Jackie Espiritu',
