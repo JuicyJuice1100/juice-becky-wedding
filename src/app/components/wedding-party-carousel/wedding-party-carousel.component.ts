@@ -36,7 +36,7 @@ export class WeddingPartyCarouselComponent implements OnInit {
       'seems happy and content, someone willing to share his ill-gotten video game loot.  ' +
       'So while everything wasn\'t that bad we knew the change was permanent.  Now, with this ' + 
       'curse being sealed in with a ring there is nothing we can do to revert him to his old ways.  ' +
-      'May his lost soul find comfort with he new life.',
+      'May his lost soul find comfort with his new life.',
       'I heard there\'s going to be food at the ring swapping ritual so ' +
       'its not a bad trade-off overall.'
       ]},    
