@@ -21,13 +21,6 @@ export class DetailsComponent implements OnInit {
       time: '@ 18:00',
       location: 'Milwaukee Public Museum',
       address: "800 W Wells St, Milwaukee, WI 53233"
-    },
-    {
-      title: 'Brunch',
-      day: 'Sunday, May 15',
-      time: 'TBA',
-      location: '',
-      address: ""
     }
   ];
 

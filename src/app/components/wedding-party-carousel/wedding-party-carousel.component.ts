@@ -10,7 +10,7 @@ export class WeddingPartyCarouselComponent implements OnInit {
     {
       name: 'Brenton Wienkes',
       role: 'Best Man',
-      image: 'https://picsum.photos/200/200',
+      image: '../assets/images/bridalParty/groomsmen/brenton.jpg',
       about: ['Juice and I met all the way back in 5th grade and we have been best friends since. ' + 
       'From his proficient multitasking ability of playing a video game while simultaneously typing on a ' +
       'typewriter and yelling "That\'s a bug" or "It missed my input", all the way to his strange ability ' +
@@ -18,9 +18,9 @@ export class WeddingPartyCarouselComponent implements OnInit {
       'the greatest friend, the best advisor, and the most deviant teammate that I\'ve never once regretted having in my life.'
       ]},
     {
-      name: 'Pete Abraham',
+      name: 'Peter Abraham',
       role: 'Groomsman',
-      image: 'https://picsum.photos/200/200',
+      image: '../assets/images/bridalParty/groomsmen/pete.jpg',
       about: ['Justin met this cat one day outside of Breese Hall (rip) during his freshman year ' +
       'of college.  Justin was so impressed by how cool, beautiful, funny, and handsome Pete was ' +
       'that he decided to befriend him.  Luckily for Justin, Pete accepted his plea for friendship.  ' +
@@ -43,7 +43,7 @@ export class WeddingPartyCarouselComponent implements OnInit {
     {
       name: 'Mitch Ladwig',
       role: 'Groomsman',
-      image: 'https://picsum.photos/200/200',
+      image: '../assets/images/bridalParty/groomsmen/mitch.jpg',
       about: ['A haiku:',
       'Pool at Varsity',
       'To a museum wedding',
@@ -52,7 +52,7 @@ export class WeddingPartyCarouselComponent implements OnInit {
     {
       name: 'Michelle Mills',
       role: 'Groomswoman',
-      image: 'https://picsum.photos/200/200',
+      image: '../assets/images/bridalParty/groomsmen/michelle.jpg',
       about: ['I\'ve known Juice for almost a decade!  We met in a nerdy club called Oshkosh ' +
       'Gaming Society and bonded over our love of games, karaoke nights, and day-drinking ' +
       'during interim. I remember when Juice first told me he found a gal he really liked.  ' +
@@ -62,7 +62,7 @@ export class WeddingPartyCarouselComponent implements OnInit {
     {
       name: 'Jared Putz',
       role: 'Groomsman',
-      image: 'https://picsum.photos/200/200'
+      image: '../assets/images/bridalParty/groomsmen/jared.jpeg',
     }
   ];
 
@@ -70,7 +70,7 @@ export class WeddingPartyCarouselComponent implements OnInit {
     {
       name: 'Megan Schmitz',
       role: 'Maid of Honor',
-      image: 'https://picsum.photos/200/200',
+      image: '../assets/images/bridalParty/bridesmaids/megan.jpeg',
       about: ['Becky and Megan met in 7th grade art classes and became fast friends. ' +
       'As years went on they became closer and closer, and Becky is one of Megan\'s best friends. ' +
       'There are endless inside jokes between the two of them. ' + 
@@ -81,13 +81,13 @@ export class WeddingPartyCarouselComponent implements OnInit {
     {
       name: 'Grace Broadnax',
       role: 'Bridesmaid',
-      image: 'https://picsum.photos/200/200',
+      image: '../assets/images/bridalParty/bridesmaids/',
       about: ["insert about"]
     },
     {
       name: 'Jackie Espiritu',
       role: 'Bridesmaid',
-      image: 'https://picsum.photos/200/200',
+      image: '../assets/images/bridalParty/bridesmaids/jackie.jpeg',
       about: ['It’s me!! The best, oldest, smartest, prettiest, and only sister of the groom, ' +
       'and officially the bride now too!! I’ve obviously known Justin since he was in diapers ' +
       'and Becky it seems like forever now. Ive witnessed Justin through all stages of life so ' +
@@ -107,13 +107,13 @@ export class WeddingPartyCarouselComponent implements OnInit {
     {
       name: 'Emily Petersen',
       role: 'Bridesmaid',
-      image: 'https://picsum.photos/200/200',
+      image: '../assets/images/bridalParty/bridesmaids/emily.jpg',
       about: ['Sometimes the best ideas come at night. "It was this big but really THIS big"']
     },
     {
       name: 'Ashley Trad',
       role: 'Bridesmaid',
-      image: 'https://picsum.photos/200/200',
+      image: '../assets/images/bridalParty/bridesmaids/ashley.jpg',
       about: ['Hey! I\'m Ashley! Becky and I met our freshman year in college. ' +
       'She lived in the dorm room across the hall from me. She came over to talk ' +
       'to me during freshman orientation since I was the shy one and that\'s where our ' +
@@ -127,7 +127,7 @@ export class WeddingPartyCarouselComponent implements OnInit {
     {
       name: 'Arthur D\'Amato',
       role: 'Officiant',
-      image: 'https://picsum.photos/200/200',
+      image: '../assets/images/bridalParty/other/arthur.jpg',
       about: ['Justin and I first met in 2008, when we began attending the University of ' +
       'Wisconsin-Oshkosh together. Our shared love of music is what brought us together, ' +
       'and I have had the privilege of performing with and also being his roommate. I have ' +
@@ -139,12 +139,12 @@ export class WeddingPartyCarouselComponent implements OnInit {
     {
       name: 'Tayler Phillips',
       role: 'DJ',
-      image: 'https://picsum.photos/200/200'
+      image: '../assets/images/bridalParty/other/tayler.jpg',
     },
     {
       name: 'Zazu',
       role: 'Bird of Honor',
-      image: 'https://picsum.photos/200/200',
+      image: '../assets/images/bridalParty/other/zazu.jpg',
       about: ["insert about"]
     }
   ];
