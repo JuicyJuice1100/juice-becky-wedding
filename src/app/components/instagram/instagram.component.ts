@@ -13,6 +13,13 @@ export class InstagramComponent implements OnInit {
     alt: 'photo'
   }
 
+  instagramData = {
+    appLink: 'https://www.instagram.com/explore/tags/BJWedding2022/?hl=en',
+    hashtag: '#BJWedding2022',
+    img: '../assets/images/photoShare/Webp.net-resizeimage.png',
+    alt: 'photo'
+  }
+
   constructor() { }
 
   ngOnInit(): void {

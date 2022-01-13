@@ -7,16 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistryComponent implements OnInit {
   cards = [
-    {
-      title: 'Amazon',
-      url: 'https://www.amazon.com/',
-      image: 'https://picsum.photos/300/500'
-    },
-    {
-      title: 'Target',
-      url: 'https://www.target.com/',
-      image: 'https://picsum.photos/300/500'
-    }
+
   ];
 
   constructor() {}
