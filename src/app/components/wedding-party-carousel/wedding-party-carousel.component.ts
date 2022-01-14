@@ -147,8 +147,7 @@ export class WeddingPartyCarouselComponent implements OnInit {
     {
       name: 'Zazu',
       role: 'Bird of Honor',
-      image: '../assets/images/bridalParty/other/zazu.jpg',
-      about: ["insert about"]
+      image: '../assets/images/bridalParty/other/zazu.jpg'
     }
   ];
 
