@@ -81,7 +81,11 @@ export class WeddingPartyCarouselComponent implements OnInit {
     {
       name: 'Grace Broadnax',
       role: 'Bridesmaid',
-      image: '../assets/images/bridalParty/bridesmaids/'
+      image: '../assets/images/bridalParty/bridesmaids/grace.jpeg',
+      about: ['A good friend is like ' +
+      'a four-leaf clover; hard to' +
+      'find and lucky to have.',
+      '-Irish proverb']
     },
     {
       name: 'Jackie Espiritu',
