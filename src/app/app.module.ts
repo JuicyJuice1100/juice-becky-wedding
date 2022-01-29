@@ -20,6 +20,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { MatExpansionModule } from '@angular/material/expansion'
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 // Bootstrap
@@ -56,8 +57,13 @@ import { ImageService } from './services/image/image.service';
 import { VisitComponent } from './components/visit/visit.component';
 import { WeddingPartyComponent } from './components/wedding-party/wedding-party.component';
 import { WeddingPartyCarouselComponent } from './components/wedding-party-carousel/wedding-party-carousel.component';
+import { CovidReminderComponent } from './components/covid-reminder/covid-reminder.component';
+import { CovidReminderDialogComponent } from './components/covid-reminder-dialog/covid-reminder-dialog.component';
 
 @NgModule({
+  entryComponents: [
+    CovidReminderDialogComponent
+  ],
   declarations: [
     AppComponent,
     NavigationComponent,
@@ -73,7 +79,9 @@ import { WeddingPartyCarouselComponent } from './components/wedding-party-carous
     HotelsComponent,
     VisitComponent,
     WeddingPartyComponent,
-    WeddingPartyCarouselComponent
+    WeddingPartyCarouselComponent,
+    CovidReminderComponent,
+    CovidReminderDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -99,7 +107,8 @@ import { WeddingPartyCarouselComponent } from './components/wedding-party-carous
     NgxPageScrollCoreModule.forRoot({duration: 1000}),
     NgxPageScrollModule,
     AngularFireModule.initializeApp(environment.firebase),
-    MatExpansionModule
+    MatExpansionModule,
+    MatDialogModule
   ],
   providers: [
     ImageService,
