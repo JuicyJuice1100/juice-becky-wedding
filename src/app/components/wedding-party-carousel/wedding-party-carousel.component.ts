@@ -160,23 +160,23 @@ export class WeddingPartyCarouselComponent implements OnInit {
     focusOnSelect: true,
     adaptiveHeight: true,
     adaptiveWidth: true,
-    autoplaySpeed: 3000,
+    // autoplaySpeed: 10000,
     mobileFirst: true,
     responsive: [
       {
         breakpoint: 1439,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
-          autoplaySpeed: 5000
+          slidesToScroll: 3
+          // autoplaySpeed: 10000
         }
       },
       {
         breakpoint: 925,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
-          autoplaySpeed: 4000
+          slidesToScroll: 2
+          // autoplaySpeed: 10000
         }
       }
     ],
