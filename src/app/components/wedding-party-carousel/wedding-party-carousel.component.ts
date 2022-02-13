@@ -147,12 +147,17 @@ export class WeddingPartyCarouselComponent implements OnInit {
     {
       name: 'Zazu',
       role: 'Bird of Honor',
-      image: '../assets/images/bridalParty/other/zazu.jpg'
+      image: '../assets/images/bridalParty/other/zazu.jpg',
+      about: [
+        'Zazu is our 16 year old conure.  He enjoys eating seed, stealing food, and pooping everywhere. ' +
+        'He also loves cuddles and scritches.  Though he will not be at the wedding, he is very excited for ' +
+        'his parents to enjoy their special day.'
+      ]
     }
   ];
 
   slideConfig = {
-    autoplay: true,
+    // autoplay: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: true,
