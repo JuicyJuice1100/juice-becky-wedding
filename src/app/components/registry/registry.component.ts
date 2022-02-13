@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistryComponent implements OnInit {
   cards = [
-
+    {
+      url: "https://www.zola.com/registry/bjwedding2022",
+      image: "../../../assets/images/registry/zola.jpg",
+      title: "Zola Wedding Registry"
+    }
   ];
 
   constructor() {}
