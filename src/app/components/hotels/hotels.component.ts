@@ -16,8 +16,7 @@ export class HotelsComponent implements OnInit {
     },
     {
       title: 'Homewood Suites',
-      //TODO: Get homewood link
-      url: '<INSERT LINK HERE>',
+      url: 'https://www.hilton.com/en/attend-my-event/mkedohw-esw-0383ef44-49ba-403a-9d57-76bb0eb86a65/?WT.mc_id=POG',
       address: "500 N. Water Street, Milwaukee, WI 53202",
       color: "accent"
     }
