@@ -6,24 +6,6 @@
   text-align: center;
 }
 
-// .detailContainer:after {
-//   border-bottom: 2px solid #E6E9EA;
-//   content: '';
-//   display: block;
-//   padding: 5px;
-//   margin: 5px;
-//   width: 80vw;
-// }
-
-// .detailContainer:before {
-//   border-bottom: 2px solid #E6E9EA;
-//   content: '';
-//   display: block;
-//   padding: 5px;
-//   margin: 5px;
-//   width: 80vw;
-// }
-
 .eventsContainer  {
   display: flex;
   flex-direction: column;
@@ -31,15 +13,6 @@
   align-items: center;
   text-align: center;
 }
-
-// .eventsContainer:after {
-//   border-bottom: 2px solid #E6E9EA;
-//   content: '';
-//   display: block;
-//   padding: 5px;
-//   margin: 5px;
-//   width: 80vw;
-// }
 
 h1 {
   font-size: xx-large;
@@ -55,6 +28,7 @@ h2 {
   padding: 5px;
   justify-content: center;
   align-items: stretch;
+  max-width: 600px;
 }
 
 .cardDisplay {
@@ -69,5 +43,6 @@ h2 {
       justify-content: center;
       align-items: stretch;
       flex-direction: column;
+      max-width: 600px;
   }
 }

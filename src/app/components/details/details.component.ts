@@ -9,18 +9,28 @@ export class DetailsComponent implements OnInit {
 
   cards = [
     {
+      title: 'Wedding Rehearsal',
+      day: 'Friday, May 13',
+      time: '@ 16:30',
+      location: 'Milwaukee Public Museum',
+      address: '800 W Wells St, Milwaukee, WI 53233',
+      notes: '*Bridal Party Only*'
+    },
+    {
       title: 'Rehearsal Dinner',
       day: 'Friday, May 13',
-      time: 'TBA',
-      location: '',
-      address: ""
+      time: '@ 18:00',
+      location: 'Rodizio Grill',
+      address: '777 N Water St, Milwaukee, WI 53202',
+      notes: '*Invitation Only*',
     },
     {
       title: 'Ceremony & Reception',
       day: 'Saturday, May 14',
       time: '@ 18:00',
       location: 'Milwaukee Public Museum',
-      address: "800 W Wells St, Milwaukee, WI 53233"
+      address: '800 W Wells St, Milwaukee, WI 53233',
+      notes: ''
     }
   ];
 
