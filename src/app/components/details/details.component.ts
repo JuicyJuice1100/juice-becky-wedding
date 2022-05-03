@@ -14,7 +14,8 @@ export class DetailsComponent implements OnInit {
       time: '@ 16:30',
       location: 'Milwaukee Public Museum',
       address: '800 W Wells St, Milwaukee, WI 53233',
-      notes: '*Bridal Party Only*'
+      notes: '*Bridal Party Only*',
+      additionalNotes: ''
     },
     {
       title: 'Rehearsal Dinner',
@@ -23,6 +24,7 @@ export class DetailsComponent implements OnInit {
       location: 'Rodizio Grill',
       address: '777 N Water St, Milwaukee, WI 53202',
       notes: '*Invitation Only*',
+      additionalNotes: ''
     },
     {
       title: 'Ceremony & Reception',
@@ -30,7 +32,8 @@ export class DetailsComponent implements OnInit {
       time: '@ 18:00',
       location: 'Milwaukee Public Museum',
       address: '800 W Wells St, Milwaukee, WI 53233',
-      notes: 'Doors Open @17:30'
+      notes: 'Doors Open @17:30',
+      additionalNotes: 'Semi-formal or Dressy Casual'
     }
   ];
 
